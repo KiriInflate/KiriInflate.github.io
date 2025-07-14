@@ -169,7 +169,7 @@
 
 <body>
     <div class="row"
-        style="background: url(resources/img/mainViz.png);background-size: cover;background-repeat: no-repeat;">
+        style="background: url(image.png);background-size: cover;background-repeat: no-repeat;">
         <div style="display: flex; align-items: center; height: 100%;">
             <div class="custom">
                 <div style="margin-bottom: 4rem;">
@@ -179,18 +179,19 @@
                             A rapid and accessible method for fabricating cross-scale inflatables with large contraction and tunable stretchability, enabling innovative, tangible interactions.
                         </p>
                     </div>
-                    </div>
+                </div>
                 <div style="display: flex; flex-direction: column; align-items:center;">
+                    
                     <div style="display: flex; " class="mgb1rem">
-                        <a href="#"> <h3>Mechanism & Fabrication</h3>
+                        <a href="pages/subpage/mechanism.html"> <h3>Mechanism & Fabrication</h3>
                         </a>
                     </div>
                     <div style="display: flex; " class="mgb1rem">
-                        <a href="#"> <h3>Structure Library & Design Tool</h3>
+                        <a href="pages/subpage/library.html"> <h3>Structure Library & Design Tool</h3>
                         </a>
                     </div>
                     <div style="display: flex; " class="mgb1rem">
-                        <a href="#"> <h3>Application Examples</h3>
+                        <a href="pages/subpage/applications.html"> <h3>Application Examples</h3>
                         </a>
                     </div>
                     </div>
@@ -199,13 +200,8 @@
     </div>
 
     <script>
-        // 下面的 Javascript 代码保持不变，以防其他功能依赖它
-        drawIcon(50 * (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) / 1728, "icon", false, false);
-
-        // 由于 GitHub 部分已删除，相关的 onclick 事件也不再需要
-        // github.onclick = function () {
-        //     window.location.href = "https://github.com/TH-Wood/TH-Wood.github.io";
-        // }
+        // 如果您的项目中没有 d3DrawIcon.js 和 icon，下面这行代码可能会报错，可以暂时注释掉。
+        // drawIcon(50 * (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) / 1728, "icon", false, false);
     </script>
 
 </body>
