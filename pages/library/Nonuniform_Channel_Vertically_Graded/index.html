@@ -13,7 +13,6 @@
     <script src="https://d3js.org/d3.v6.js"></script>
     <script src="../../../js/d3DrawIcon.js"></script>
 
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AngeloFaella/DocumentOutline@1.0/outline.css">
     <script src="../../../js/DocumentOutline.js"></script>
 
@@ -30,51 +29,38 @@
             font-size: calc(1728vw / 1728);
         }
 
-        h1 {
+        h1, h2, h3 {
             font-family: 'DM Serif Display', serif;
             color: #030303;
-            font-size: 4.5rem;
-            margin: 0;
         }
-
-        h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2.5rem;
-            color: #030303;
-            margin: 0;
+        h1 { font-size: 4.5rem; margin: 0; }
+        h2 { font-size: 2.5rem; margin: 0; }
+        h3 { font-size: 1.5rem; margin: 0; }
+        
+        li, p {
+            font-family: 'Noto Sans', sans-serif;
+            color: rgba(3, 3, 3, 0.7);
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
         }
-
-        h3 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.5rem;
-            color: #030303;
-            margin: 0;
-        }
-
-        a {
+        
+        .design-tool-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white !important;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-align: center;
             text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
         }
-
-        li,
-        p {
-            font-family: 'Noto Sans', sans-serif;
-            color: rgba(3, 3, 3, 0.7);
-            font-size: 1rem;
-            margin-bottom: 0.3rem;
-        }
-
-        a {
-            font-family: 'Noto Sans', sans-serif;
-            color: rgba(229, 30, 243, 0.7);
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        figcaption {
-            font-family: 'Noto Sans', sans-serif;
-            color: rgba(3, 3, 3, 0.7);
-            font-size: 0.9rem;
-            margin-bottom: 0.3rem;
+        .design-tool-link:hover {
+            background-color: #0056b3;
+            color: white !important;
         }
     </style>
 </head>
@@ -99,6 +85,7 @@
             <li>Ending Channel Width: 9.0 mm</li>
             <li>Number of Units: 4</li>
         </ul>
+        <p style="margin-top: 1rem;"><strong>Please note:</strong> In the design tool, the 'Slip Overlap Distance' is not a direct input. It is automatically calculated based on the 'Channel Length' and the 'Central Slits' length you define.</p>
 
         <h2 style="margin: 4rem 0 2rem 0;">Customization Options and Actuation Control</h2>
         <p>KiriInflate structures offer high programmability of geometric and mechanical properties through customization of slit patterns on 2D surfaces, allowing for rapid formation of stretchable 3D geometries with tailored mechanical behaviors. Key parameters to adjust include:</p>
@@ -115,21 +102,25 @@
         <img src="2.png" alt="Visualization of customization options" style="width: 100%; margin: 2rem 0;">
 
         <h2 style="margin: 4rem 0 2rem 0;">Design Tool</h2>
-        <img src="3.png" alt="Design tool interface" style="width: 100%; margin: 2rem 0;">
-        <p>The Slip Overlap Distance is jointly determined by the Channel Length and the length of the Central Slits.</p>
+        <p>Click the link below to access the interactive Grasshopper model on ShapeDiver. You can adjust parameters in real-time and see the geometric changes instantly.</p>
+        
+        <a href="https://www.shapediver.com/app/m/nonuniform-channel-vertically-graded?modelStateId=HFspFYmvvrzihYJO" 
+           class="design-tool-link" 
+           target="_blank" 
+           rel="noopener noreferrer">
+           Open Interactive Design Tool
+        </a>
 
         <div style="margin-top: 10rem;"></div>
     </div>
 
     <script>
-        // Placeholder for drawIcon function if it exists
         if (typeof drawIcon === 'function') {
             drawIcon(50 * (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) / 1728, "icon", false, false);
         }
     </script>
 
     <script>
-        // Placeholder for DocumentOutline if it exists
         if (typeof DocumentOutline === 'function') {
             let outline = new DocumentOutline({
                 backgroundColor: '#2c2c2c',
