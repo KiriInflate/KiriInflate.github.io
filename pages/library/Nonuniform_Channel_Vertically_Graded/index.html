@@ -44,11 +44,10 @@
             margin-bottom: 0.3rem;
         }
         
-        .design-tool-link {
+        .design-tool-link, .download-link {
             display: inline-block;
             margin-top: 1.5rem;
             padding: 12px 25px;
-            background-color: #007bff;
             color: white !important;
             font-family: 'Noto Sans', sans-serif;
             font-size: 1.1rem;
@@ -58,9 +57,20 @@
             border-radius: 8px;
             transition: background-color 0.3s ease;
         }
+        .design-tool-link {
+            background-color: #007bff;
+        }
         .design-tool-link:hover {
             background-color: #0056b3;
-            color: white !important;
+        }
+
+        /* --- Style for the download button --- */
+        .download-link {
+            background-color: #28a745; /* Green color for download */
+            margin-left: 1rem;
+        }
+        .download-link:hover {
+            background-color: #218838;
         }
     </style>
 </head>
@@ -102,14 +112,22 @@
         <img src="2.png" alt="Visualization of customization options" style="width: 100%; margin: 2rem 0;">
 
         <h2 style="margin: 4rem 0 2rem 0;">Design Tool</h2>
-        <p>Click the link below to access the interactive Grasshopper model on ShapeDiver. You can adjust parameters in real-time and see the geometric changes instantly.</p>
+        <p>Click the link below to access the interactive Grasshopper model on ShapeDiver. If you encounter any issues with the online tool, you can also download the Grasshopper source file to use locally.</p>
         
-        <a href="https://www.shapediver.com/app/m/nonuniform-channel-vertically-graded?modelStateId=HFspFYmvvrzihYJO" 
-           class="design-tool-link" 
-           target="_blank" 
-           rel="noopener noreferrer">
-           Open Interactive Design Tool
-        </a>
+        <div>
+            <a href="https://www.shapediver.com/app/m/nonuniform-channel-vertically-graded?modelStateId=HFspFYmvvrzihYJO" 
+               class="design-tool-link" 
+               target="_blank" 
+               rel="noopener noreferrer">
+               Open Interactive Design Tool
+            </a>
+            
+            <a href="Nonuniform Channel – Vertically Graded.gh" 
+               class="download-link" 
+               download>
+               Download .gh File
+            </a>
+        </div>
 
         <div style="margin-top: 10rem;"></div>
     </div>
