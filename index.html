@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KiriInflate</title>
+    <title>TH-Wood: Developing Thermo-Hygro-Coordinating Driven Wood Actuators to Enhance Human-Nature Interaction
+    </title>
     <meta property="og:title" content="IntelliTex - Fabrication of functional textiles using double-coating process">
     <meta property="og:locale" content="en_US">
     <link rel="canonical" href="https://intellitex-doublecoat.github.io">
@@ -169,39 +170,74 @@
 
 <body>
     <div class="row"
-        style="background: url(image.png);background-size: cover;background-repeat: no-repeat;">
+        style="background: url(resources/img/mainViz.png);background-size: cover;background-repeat: no-repeat;">
         <div style="display: flex; align-items: center; height: 100%;">
             <div class="custom">
                 <div style="margin-bottom: 4rem;">
-                    <h1 class="title mgb1rem" style="text-align: center; ">KiriInflate</h1>
+                    <h1 class="title mgb1rem" style="text-align: center; ">TH-Wood</h1>
                     <div style="display: flex; align-items: center; justify-content: center;">
-                        <p class="subtitle" style="width: 72%; text-align: center;">
-                            A rapid and accessible method for fabricating cross-scale inflatables with large contraction and tunable stretchability, enabling innovative, tangible interactions.
-                        </p>
+                        <p class="subtitle" style="width: 72%; text-align: center;">A biodegradable
+                            actuator system
+                            made
+                            from wood veneer
+                            and
+                            microbial polymers, responsive to temperature and humidity,
+                            designed for operation in complex outdoor environments. </p>
                     </div>
+
                 </div>
                 <div style="display: flex; flex-direction: column; align-items:center;">
-                    
                     <div style="display: flex; " class="mgb1rem">
-                        <a href="pages/subpage/mechanism.html"> <h3>Mechanism & Fabrication</h3>
+                        <a href="pages/subpage/MFGuide.html">
+                            <h3>Mechanism and Fabrication</h3>
                         </a>
-                    </div>
-                    <div style="display: flex; " class="mgb1rem">
-                        <a href="pages/subpage/library.html"> <h3>Structure Library & Design Tool</h3>
-                        </a>
+                        <!-- <img src="resources/svg/rightArrow.svg" alt="" style="width: 2rem;"> -->
                     </div>
                     <div style="display: flex; " class="mgb1rem">
-                        <a href="pages/subpage/applications.html"> <h3>Application Examples</h3>
+                        <a href="pages/subpage/library.html">
+                            <h3>Plant-inspired Library</h3>
                         </a>
+                        <!-- <img src="resources/svg/rightArrow.svg" alt="" style="width: 2rem;"> -->
                     </div>
+                    <div style="display: flex; " class="mgb1rem">
+                        <a href="pages/subpage/appExamples.html">
+                            <h3>Application Examples</h3>
+                        </a>
+                        <!-- <img src="resources/svg/rightArrow.svg" alt="" style="width: 2rem;"> -->
                     </div>
+
+                    <div id="github" style="display: flex; " class="mgb1rem" onclick="toast">
+                        <!-- <a> -->
+                        <h3>GitHub</h3>
+                        <!-- </a> -->
+                        <!-- <img src="resources/svg/rightArrow.svg" alt="" style="width: 2rem;"> -->
+                    </div>
+                    <!-- <div style="display: flex; " class="mgb1rem">
+                            <a href="pages/subpage/sampleProj.html">
+                                <h3>Search</h3>
+                            </a>
+                            <img src="resources/svg/rightArrow.svg" alt="" style="width: 2rem;">
+                        </div> -->
+                    <!-- <div style="display: flex; " class="mgb1rem">
+                            <a href="pages/subpage/FAQ.html">
+                                <h3>FAQ</h3>
+                            </a>
+                            <img src="resources/svg/rightArrow.svg" alt="" style="width: 2rem;">
+                        </div> -->
+                </div>
             </div>
         </div>
+
+    </div>
     </div>
 
     <script>
-        // 如果您的项目中没有 d3DrawIcon.js 和 icon，下面这行代码可能会报错，可以暂时注释掉。
-        // drawIcon(50 * (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) / 1728, "icon", false, false);
+        drawIcon(50 * (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) / 1728, "icon", false, false);
+        github.onclick = function () {
+            // console.log(1)
+            // alert("Due to the ongoing double-blind peer review process, detailed information for this project is not publicly available at this time.")
+            window.location.href = "https://github.com/TH-Wood/TH-Wood.github.io";
+        }
     </script>
 
 </body>
