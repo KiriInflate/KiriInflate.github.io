@@ -51,174 +51,11 @@
             margin: 0;
         }
 
-        .h1StylePTag {
-            font-family: 'DM Serif Display', serif;
-            color: #030303;
-            font-size: 4.5rem;
-            margin: 0;
-        }
-
-        .h2StylePTag {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2.5rem;
-            color: #030303;
-            margin: 0;
-        }
-
-        .h3StylePTag {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.5rem;
-            color: #030303;
-            margin: 0;
-        }
-
         p {
             font-family: 'Noto Sans', sans-serif;
             color: rgba(3, 3, 3, 0.7);
             font-size: 1rem;
             margin: 1rem 0 0.2rem 0;
-        }
-
-        div.btn-container {
-            display: flex;
-            vertical-align: middle;
-            text-align: center;
-        }
-
-        div.btn-container i {
-            display: inline-block;
-            position: relative;
-            top: -9px;
-        }
-
-        label {
-            font-size: 13px;
-            color: #424242;
-            font-weight: 500;
-        }
-
-        .btn-color-mode-switch {
-            display: inline-block;
-            margin: 0px;
-            position: relative;
-        }
-
-        .btn-color-mode-switch>label.btn-color-mode-switch-inner {
-            margin: 0px;
-            width: 8rem;
-            height: 2rem;
-            background: #E0E0E0;
-            border-radius: 1rem;
-            overflow: hidden;
-            position: relative;
-            transition: all 0.3s ease;
-            /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
-            display: block;
-        }
-
-        .btn-color-mode-switch>label.btn-color-mode-switch-inner:before {
-            content: attr(data-on);
-            position: absolute;
-            font-size: 0.8rem;
-            font-family: 'ZCOOL XiaoWei';
-            top: 0.3rem;
-            right: 1.2rem;
-
-        }
-
-        .btn-color-mode-switch>label.btn-color-mode-switch-inner:after {
-            content: attr(data-off);
-            width: 4rem;
-            height: 1.6rem;
-            background: #fff;
-            border-radius: 2rem;
-            position: absolute;
-            left: 0.2rem;
-            top: 0.2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            font-size: 0.8rem;
-            box-shadow: 0px 0px 6px -2px #111;
-            font-family: 'ZCOOL XiaoWei';
-            padding: .1rem 0px;
-        }
-
-        .btn-color-mode-switch>.alert {
-            display: none;
-            background: #FF9800;
-            border: none;
-            color: #fff;
-        }
-
-        .btn-color-mode-switch input[type="checkbox"] {
-            cursor: pointer;
-            width: 4rem;
-            height: 1.6rem;
-            opacity: 0;
-            position: absolute;
-            top: 0;
-            z-index: 1;
-            margin: 0px;
-        }
-
-        .btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner {
-            background: #3b3b3b;
-            color: #fff;
-        }
-
-        .btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner:after {
-            content: attr(data-on);
-            left: 3.8rem;
-            background: #5d5d5d;
-        }
-
-        .btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner:before {
-            content: attr(data-off);
-            right: auto;
-            left: 20px;
-        }
-
-        .btn-color-mode-switch input[type="checkbox"]:checked~.alert {
-            display: block;
-        }
-
-        .glassmorphismHeader {
-            background: rgba(249, 249, 249, 0.6);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            z-index: 99;
-        }
-
-        .card {
-            background-color: #F9F8F8;
-            border-radius: 0 2rem 0rem 0;
-            box-shadow: 0 4px 50px #03030317;
-            padding: 2rem;
-            border: none;
-            margin: 0 2rem;
-            cursor: pointer;
-
-        }
-
-        .card img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .card::after {
-            content: "";
-            position: absolute;
-            bottom: 0px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: #000;
-            transform: scaleX(0);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .card:hover::after {
-            transform: scaleX(1);
         }
 
         .divToggle {
@@ -230,7 +67,6 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
-            /* Use flex-start to align items to the beginning */
         }
 
         .L-card {
@@ -241,13 +77,11 @@
             margin-right: 20px;
             box-sizing: border-box;
             height: 22rem;
-            /* Adjusted height */
             display: flex;
             flex-direction: column;
             padding: 20px;
             cursor: pointer;
             text-align: center;
-            /* Center content */
         }
 
         .L-card img {
@@ -258,7 +92,6 @@
 
         .L-card h3 {
             margin-top: 1.5rem;
-            /* Adjusted margin */
             font-size: 1.75rem !important;
             font-weight: bold;
         }
@@ -268,6 +101,9 @@
         }
 
         @media (max-width: 768px) {
+             .divToggle {
+                margin: 4rem 10rem 0 10rem;
+            }
             .L-card {
                 border-radius: 15px;
                 height: auto;
@@ -283,19 +119,10 @@
             .L-card img {
                 width: 8rem;
                 height: 8rem;
-                margin: 0 auto;
             }
 
             h2 {
                 font-size: 4rem;
-            }
-
-            p {
-                font-size: 2rem !important;
-            }
-
-            .divToggle {
-                margin: 4rem 10rem 0 10rem;
             }
         }
 
@@ -311,7 +138,15 @@
 <body>
     <div>
         <div class="divToggle">
-            <div class="L-box">
+            <div class="divHeader" onclick="detailItem(this)"
+                style="display: flex; align-items: center; border-bottom: 3px solid #030303; justify-content: space-between; padding-bottom: 20px; cursor: pointer;">
+                <div style="display: flex; align-items: center;">
+                    <h2>Primitives</h2>
+                </div>
+                <img class="moreLessIcon" src="../../resources/img/icons/moreIcon.png" alt="Toggle"
+                    style="width: 4rem; margin-right: 3rem;">
+            </div>
+            <div class="divToggleContent L-box" style="display: none;">
                 <div class="L-card" onclick="router('../library/ButtressRoot/index.html')">
                     <img src="../../resources/img/library/Buttress Root.png" alt="Buttress Root" data-toggle="tooltip" title="dip-coating">
                     <h3>Buttress Root</h3>
@@ -320,6 +155,19 @@
                     <img src="../../resources/img/library/Blade-Like.png" alt="Blade-Like Leaf" data-toggle="tooltip" title="dip-coating">
                     <h3>Blade-Like Leaf</h3>
                 </div>
+            </div>
+        </div>
+
+        <div class="divToggle">
+            <div class="divHeader" onclick="detailItem(this)"
+                style="display: flex; align-items: center; border-bottom: 3px solid #030303; justify-content: space-between; padding-bottom: 20px; cursor: pointer;">
+                <div style="display: flex; align-items: center;">
+                    <h2>Array</h2>
+                </div>
+                <img class="moreLessIcon" src="../../resources/img/icons/moreIcon.png" alt="Toggle"
+                    style="width: 4rem; margin-right: 3rem;">
+            </div>
+            <div class="divToggleContent L-box" style="display: none;">
                 <div class="L-card" onclick="router('../library/TumbleweedSeed/index.html')">
                     <img src="../../resources/img/library/Tumbleweed Seed.png" alt="Tumbleweed Seed" data-toggle="tooltip" title="dip-coating">
                     <h3>Tumbleweed Seed</h3>
@@ -328,6 +176,19 @@
                     <img src="../../resources/img/library/Winged Seed.png" alt="Winged Seed" data-toggle="tooltip" title="dip-coating">
                     <h3>Winged Seed</h3>
                 </div>
+            </div>
+        </div>
+
+        <div class="divToggle">
+            <div class="divHeader" onclick="detailItem(this)"
+                style="display: flex; align-items: center; border-bottom: 3px solid #030303; justify-content: space-between; padding-bottom: 20px; cursor: pointer;">
+                <div style="display: flex; align-items: center;">
+                    <h2>Nonuniform Channel</h2>
+                </div>
+                <img class="moreLessIcon" src="../../resources/img/icons/moreIcon.png" alt="Toggle"
+                    style="width: 4rem; margin-right: 3rem;">
+            </div>
+            <div class="divToggleContent L-box" style="display: none;">
                 <div class="L-card" onclick="router('../library/BallisticSeed/index.html')">
                     <img src="../../resources/img/library/Ballistic Seed.png" alt="Ballistic Seed" data-toggle="tooltip" title="dip-coating">
                     <h3>Ballistic Seed</h3>
@@ -336,6 +197,19 @@
                     <img src="../../resources/img/library/Stomata Structure.png" alt="Stomata Structure" data-toggle="tooltip" title="dip-coating">
                     <h3>Stomata Structure</h3>
                 </div>
+            </div>
+        </div>
+
+        <div class="divToggle">
+            <div class="divHeader" onclick="detailItem(this)"
+                style="display: flex; align-items: center; border-bottom: 3px solid #030303; justify-content: space-between; padding-bottom: 20px; cursor: pointer;">
+                <div style="display: flex; align-items: center;">
+                    <h2>Curved Pattern</h2>
+                </div>
+                <img class="moreLessIcon" src="../../resources/img/icons/moreIcon.png" alt="Toggle"
+                    style="width: 4rem; margin-right: 3rem;">
+            </div>
+            <div class="divToggleContent L-box" style="display: none;">
                 <div class="L-card" onclick="router('../library/OrigamiStructure/index.html')">
                     <img src="../../resources/img/library/Origami Structure.png" alt="Origami Structure" data-toggle="tooltip" title="dip-coating">
                     <h3>Origami Structure</h3>
@@ -344,6 +218,19 @@
                     <img src="../../resources/img/library/Petal Structure.png" alt="Petal Structure" data-toggle="tooltip" title="dip-coating">
                     <h3>Petal Structure</h3>
                 </div>
+            </div>
+        </div>
+
+        <div class="divToggle">
+            <div class="divHeader" onclick="detailItem(this)"
+                style="display: flex; align-items: center; border-bottom: 3px solid #030303; justify-content: space-between; padding-bottom: 20px; cursor: pointer;">
+                <div style="display: flex; align-items: center;">
+                    <h2>3D Structure with Strechability</h2>
+                </div>
+                <img class="moreLessIcon" src="../../resources/img/icons/moreIcon.png" alt="Toggle"
+                    style="width: 4rem; margin-right: 3rem;">
+            </div>
+            <div class="divToggleContent L-box" style="display: none;">
                 <div class="L-card" onclick="router('../library/FoldingLeaf/index.html')">
                     <img src="../../resources/img/library/Folding Leaf.png" alt="Folding Leaf" data-toggle="tooltip" title="dip-coating">
                     <h3>Folding Leaf</h3>
@@ -352,6 +239,19 @@
                     <img src="../../resources/img/library/Hooked Tendril.png" alt="Hooked Tendril Root" data-toggle="tooltip" title="dip-coating">
                     <h3>Hooked Tendril Root</h3>
                 </div>
+            </div>
+        </div>
+
+        <div class="divToggle">
+            <div class="divHeader" onclick="detailItem(this)"
+                style="display: flex; align-items: center; border-bottom: 3px solid #030303; justify-content: space-between; padding-bottom: 20px; cursor: pointer;">
+                <div style="display: flex; align-items: center;">
+                    <h2>Dynamic Hollow Pattern</h2>
+                </div>
+                <img class="moreLessIcon" src="../../resources/img/icons/moreIcon.png" alt="Toggle"
+                    style="width: 4rem; margin-right: 3rem;">
+            </div>
+            <div class="divToggleContent L-box" style="display: none;">
                 <div class="L-card" onclick="router('../library/TrapLobe/index.html')">
                     <img src="../../resources/img/library/Trap Lobe.png" alt="Trap Lobe" data-toggle="tooltip" title="dip-coating">
                     <h3>Trap Lobe</h3>
@@ -362,6 +262,7 @@
                 </div>
             </div>
         </div>
+
         <div style="margin: 12rem 0 0 0;"></div>
     </div>
 
@@ -369,6 +270,19 @@
         function router(url) {
             window.location.href = url;
         }
+
+        function detailItem(obj) {
+            var content = $(obj).parent().find(".divToggleContent");
+            var icon = $(obj).find(".moreLessIcon");
+            if (content.is(":hidden")) {
+                content.slideDown(500);
+                icon.attr("src", "../../resources/img/icons/lessIcon.png");
+            } else {
+                content.slideUp(500);
+                icon.attr("src", "../../resources/img/icons/moreIcon.png");
+            }
+        }
+
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
         });
