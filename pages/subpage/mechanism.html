@@ -14,10 +14,7 @@
     <script src="../../js/d3DrawIcon.js"></script>
 
 
-    <!-- outline Import CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AngeloFaella/DocumentOutline@1.0/outline.css">
-    <!-- outline Import the library -->
-    <!-- <script src="https://cdn.jsdelivr.net/gh/AngeloFaella/DocumentOutline@1.0/DocumentOutline.js"></script> -->
     <script src="../../js/DocumentOutline.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,6 +46,13 @@
         h3 {
             font-family: 'DM Serif Display', serif;
             font-size: 1.5rem;
+            color: #030303;
+            margin: 0;
+        }
+        
+        h5 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem;
             color: #030303;
             margin: 0;
         }
@@ -99,121 +103,25 @@
             font-size: 0.9rem;
             margin-bottom: 0.3rem;
         }
-
-        div.btn-container {
-            display: flex;
-            vertical-align: middle;
-            text-align: center;
+        
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
         }
 
-        div.btn-container i {
-            display: inline-block;
-            position: relative;
-            top: -9px;
+        th, td {
+            border: 1px solid rgba(3, 3, 3, 0.2);
+            padding: 8px;
+            text-align: left;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 0.9rem;
         }
 
-        label {
-            font-size: 13px;
-            color: #424242;
-            font-weight: 500;
-        }
-
-        .btn-color-mode-switch {
-            display: inline-block;
-            margin: 0px;
-            position: relative;
-        }
-
-        .btn-color-mode-switch>label.btn-color-mode-switch-inner {
-            margin: 0px;
-            width: 8rem;
-            height: 2rem;
-            background: #E0E0E0;
-            border-radius: 1rem;
-            overflow: hidden;
-            position: relative;
-            transition: all 0.3s ease;
-            /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
-            display: block;
-        }
-
-        .btn-color-mode-switch>label.btn-color-mode-switch-inner:before {
-            content: attr(data-on);
-            position: absolute;
-            font-size: 0.8rem;
-            font-family: 'ZCOOL XiaoWei';
-            top: 0.3rem;
-            right: 1.2rem;
-
-        }
-
-        .btn-color-mode-switch>label.btn-color-mode-switch-inner:after {
-            content: attr(data-off);
-            width: 4rem;
-            height: 1.6rem;
-            background: #fff;
-            border-radius: 2rem;
-            position: absolute;
-            left: 0.2rem;
-            top: 0.2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            font-size: 0.8rem;
-            box-shadow: 0px 0px 6px -2px #111;
-            font-family: 'ZCOOL XiaoWei';
-            padding: .1rem 0px;
-        }
-
-        .btn-color-mode-switch>.alert {
-            display: none;
-            background: #FF9800;
-            border: none;
-            color: #fff;
-        }
-
-        .btn-color-mode-switch input[type="checkbox"] {
-            cursor: pointer;
-            width: 4rem;
-            height: 1.6rem;
-            opacity: 0;
-            position: absolute;
-            top: 0;
-            z-index: 1;
-            margin: 0px;
-        }
-
-        .btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner {
-            background: #3b3b3b;
-            color: #fff;
-        }
-
-        .btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner:after {
-            content: attr(data-on);
-            left: 3.8rem;
-            background: #5d5d5d;
-        }
-
-        .btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner:before {
-            content: attr(data-off);
-            right: auto;
-            left: 20px;
-        }
-
-        /* .btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner {
-            background: #66BB6A;
-            color: #fff;
-        } */
-
-        .btn-color-mode-switch input[type="checkbox"]:checked~.alert {
-            display: block;
-        }
-
-        /* header 锚泊咯 */
-        .glassmorphismHeader {
-            background: rgba(249, 249, 249, 0.6);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            z-index: 99;
+        th {
+            background-color: #f2f2f2;
+            font-family: 'DM Serif Display', serif;
+            font-size: 1rem;
         }
 
         @media (max-width: 768px) {
@@ -255,206 +163,100 @@
 </head>
 
 <body>
-    <!-- <div class="glassmorphismHeader"
-        style="position: fixed; top: 0; left: 0; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0.4rem 20rem 0.4rem 30rem;">
-        <a href="../../index.html">
-            <div style="display: flex; align-items: center;">
-                <div id="icon"></div>
-                <p class="h3StylePTag">INTELLITEX</p>
-            </div>
-        </a>
-
-    </div> -->
 
     <div style="margin: 6rem 20rem 0 24rem;">
-        <p class="h1StylePTag content" data-lan="en" data-en="Step-by-step Guide" style="margin: 0 0 4rem 0;">
-            Mechanism and Fabrication</p>
-        <!-- <button onclick="toggleLanguage()">切换语言</button> -->
+        <p class="h1StylePTag" style="margin: 0 0 4rem 0;">
+            Mechanism & Fabrication
+        </p>
 
-        <p class="content">This guide will walk you through the process of designing, fabricating, and using TH-Wood, an
-            actuator that responds to
-            both temperature and humidity changes. Inspired by the bi-layer deformation of pinecones, TH-Wood combines
-            wood veneer
-            with 3D-printed Polyhydroxyalkanoate (PHA) stripes, creating an actuator with flexible and responsive
-            actuation.</p>
-        <h2 class="content" style="margin: 2rem 0;">Understand How It
-            Works</h2>
+        <p>
+            This guide will walk you through the process of understanding the underlying mechanisms, designing, and fabricating KiriInflate structures – a novel type of inflatable that leverages Kirigami cuts for dynamic shape-changing interactions. KiriInflate combines the ease of use and widespread availability of film inflatables with precise laser fabrication, creating structures with large contraction, tunable stretchability, and versatile morphing capabilities.
+        </p>
+        
+        <h2 style="margin: 2rem 0;">Understand How It Works</h2>
 
-        <!-- <img src="../../resources/img/workflow/doublecoat.png" alt="" style="width: 100%; margin-bottom: 2rem;"> -->
-
-        <p>The actuator works by exploiting the different expansion behaviors of its two layers:</p>
-
-        <!-- <ul> -->
-        <!-- <li> -->
-        <ul>
-            <li>Wood veneer responds to humidity (hygroscopic expansion), bending toward
-                the PHA layer.</li>
-            <li>PHA responds to temperature changes (thermal expansion), bending away from
-                the wood veneer.</li>
-        </ul>
-
-        <p>These combined behaviors create precise, controlled deformation based on environmental conditions.</p>
-        <img src="../../resources/img/Mechanism and Fabrication/mechanism.png" alt=""
-            style="width: 100%; margin: 2rem 0;">
-
-
-        <!-- </ul> -->
-
-
-        <h2 style="margin: 6rem 0 2rem 0;">
-            Materials Preparation</h2>
-        <ul>
-            <li>Elm Veneer (0.2 mm thick) with uniform fiber orientation, ideal for
-                thermal-driven actuation. You can also choose
-                other thin, anisotropic wood types with noticeable expansion properties.</li>
-            <li>Pine Veneer (0.5 mm thick), also with uniform fiber orientation, is
-                suitable for humidity-driven actuation. This type
-                of wood offers higher mechanical strength and rigidity.</li>
-            <li>Polyhydroxyalkanoate (PHA) filament for 3D printing.</li>
-            <li>Soy Wax for optional coating to reduce humidity-driven deformation.
-                For better control over deformation, use wood veneer with fibers running parallel to the sheet edges.
-            </li>
-        </ul>
-        <!-- <figure>
-            <img src="../../resources/img/workflow/fabricationflow.png" alt="" style="width: 100%;">
-            <figcaption>Fabrication pipeline of interactive textiles using fabric inputs fabricated by the
-                double-coating process.</figcaption>
-        </figure> -->
-
-        <!-- <p>We proposed a pipeline to build integrated interactive textiles using fabric inputs fabricated with the
-            double-coating process.</p> -->
-
-        <img src="../../resources/img/Mechanism and Fabrication/material.png" alt=""
-            style="width: 100%; margin: 2rem 0;">
-        <!-- <p>Connect output components (if any), and a voltage divider circuit based on microcomputer ESP32C3 onto the
-            fabric using metal button. We provide several output components to support a
-            wider range of expression possibilities for users, including LEDs, vibrators, and buzzers. </p> -->
-
-        <h2 class="content" style="margin: 2rem 0;">Fabricating a Thermal-Driven Actuator</h2>
-
-        <!-- <img src="../../resources/img/workflow/doublecoat.png" alt="" style="width: 100%; margin-bottom: 2rem;"> -->
-
-        <!-- <p>The actuator works by exploiting the different expansion behaviors of its two layers:</p> -->
-
-        <!-- <ul> -->
-        <!-- <li> -->
-        <h3 style="margin: 2rem 0 1rem 0;">Step 1: Material Selection</h3>
+        <p>KiriInflate's unique behavior stems from the interplay of its two primary structural elements: heat-sealed air channels and Kirigami-inspired slits.</p>
 
         <ul>
-            <li>For thermal-driven actuation, use 0.2 mm elm veneer.</li>
-            <li>Wax Coating: Apply a hydrophobic soy wax coating to the wood veneer to minimize deformation caused by
-                humidity.</li>
-            <li>Use PHA filament for the 3D-printed stripes.</li>
+            <li><b>Heat Sealing Traces:</b> These form the sealed air chambers. Upon inflation, the expansion of these channels is constrained by the surrounding sealed regions, forcing the material to contract sideways and transform from a flat 2D surface into a compact 3D structure.</li>
+            <li><b>Kirigami Slits:</b> Embedded within the film, these precisely cut patterns segment the continuous film into truss-like units. They remove movement restrictions between adjacent air channels, allowing them to slide, rotate, and even overlap during inflation. This significantly enhances the overall contraction and provides tunable elasticity.</li>
         </ul>
-        <!-- </li> -->
-        <!-- <li> -->
-        <h3 style="margin: 2rem 0 1rem 0;">Step 2: Hot Pressing</h3>
-        <p>Hot press the wood veneer to ensure it remains flat and stable, avoiding warping:</p>
+        
+        <p>Together, these elements allow for:</p>
+        
         <ul>
-            <li>Temperature: 150°C</li>
-            <li>Time: 20 minutes</li>
+            <li><b>Active Contraction:</b> Inflation-driven, generating forces for significant shrinkage.</li>
+            <li><b>Passive Stretching:</b> When external forces are applied, the inflated structure resists deformation like a soft spring, with its elastic resistance tunable by adjusting internal air pressure.</li>
         </ul>
-        <p>This step prepares the veneer for 3D printing, ensuring a smooth and compact surface.</p>
-        <img src="../../resources/img/Mechanism and Fabrication/hot-press.gif" alt=""
-            style="width: 100%; margin: 2rem 0;">
+        
+        <img src="../../resources/img/Mechanism and Fabrication/active-actuation-passive-stretch.gif" alt="Active actuation and passive stretch demonstration" style="width: 100%; margin: 2rem 0;">
+        <h2 style="margin: 6rem 0 2rem 0;">Materials Preparation</h2>
+        
+        <p>KiriInflate primarily utilizes PE (Polyethylene) electrostatic adhesive films due to their excellent properties for this fabrication method: <b>Accessibility</b> - Widely available and cost-effective; <b>Optical Transparency</b> - Allows for visual inspection and aesthetic applications; <b>Ultrathin Profile</b> - Enables fine-resolution structures; <b>Strong Electrostatic Adhesion</b> - Crucial for the single-step cutting and sealing process.</p>
+        <p>While PE film is the primary choice, the proposed structures are also compatible with other fabrication methods and materials, such as TPU-coated nylon, for scenarios requiring higher elasticity and stronger force feedback.</p>
 
+        <h2 style="margin: 6rem 0 2rem 0;">Fabricating a KiriInflate</h2>
+        <p>The fabrication of KiriInflate structures is a rapid, precise, and accessible process, leveraging a standard laser cutter.</p>
 
-        <h3 style="margin: 2rem 0 1rem 0;">Step 3: 3D Printing</h3>
-        <p>Print the PHA stripes directly onto the prepared wood veneer to form the bi-layer actuator:</p>
-        <h5 style="margin: 2rem 0 1rem 0;">Printer Settings:</h5>
+        <figure>
+             <img src="../../resources/img/Mechanism and Fabrication/Fabrication-workflow.jpg" alt="Fabrication workflow" style="width: 100%; margin-bottom: 1rem;">
+             <figcaption style="text-align: center;">Prepare films, Laser Cut & Heat weld, Inflate</figcaption>
+        </figure>
+        <h3 style="margin: 2rem 0 1rem 0;">Step 1: Material Preparation</h3>
+        <p>Prepare a double-layer or multi-layer plastic film from the roll, specifically PE (Polyethylene) electrostatic adhesive films that exhibit automatic adhesion due to electrostatic attraction. This electrostatic cling is key to the single-pass cutting and sealing fabrication process.</p>
+        
+        <h5>Tips:</h5>
         <ul>
-            <li>Speed: 200 mm/s</li>
-            <li>Nozzle Temperature: 220°C</li>
-            <li>Layer Height: 0.1 mm</li>
-            <li>Toolpath Width: 0.4 mm</li>
+            <li>Ensure you peel off two or more layers together to prevent air bubbles from forming between the layers.</li>
+            <li>For small-sized inflatables, thinner materials (e.g., 0.03 mm) are recommended. For larger-sized inflatables, thicker materials (e.g., 0.1 mm) are recommended.</li>
         </ul>
-        <p>Tip: If double-sided printing is required, ensure precise alignment of the printed stripes on both sides to
-            maintain
-            consistent deformation.</p>
-        <img src="../../resources/img/Mechanism and Fabrication/3Dprinting.gif" alt=""
-            style="width: 100%; margin: 2rem 0;">
-        <h3 style="margin: 2rem 0 1rem 0;">Step 4: Laser Cutting</h3>
-        <p>Laser cut the printed actuator into the desired shape.</p>
+
+        <img src="../../resources/img/Mechanism and Fabrication/film-preparation.gif" alt="Film preparation" style="width: 100%; margin: 2rem 0;">
+        <h3 style="margin: 2rem 0 1rem 0;">Step 2: Laser Cutting & Heat welding</h3>
+        <p>The core of the KiriInflate fabrication. A standard laser cutting machine simultaneously cuts and heat-seals the edges of the inflatable in a single pass. This unique method ensures ultra-narrow seals (down to 0.04 mm) and high alignment, critical for intricate internal slit patterns.</p>
         <ul>
-            <li>Cutting Speed: 50 mm/s</li>
-            <li>Cutting Power: 40–60%</li>
+            <li><b>Simultaneous Cut & weld:</b> Higher laser power settings are used to achieve both cutting and heat welding.</li>
+            <li><b>Heat Welding Only:</b> Lower power settings can be used to only heat-seal along a path without cutting, useful for creating multi-layer air chambers.</li>
         </ul>
-        <p>Once cut, the actuator will bend into the desired shape as the environmental temperature changes.</p>
-        <img src="../../resources/img/Mechanism and Fabrication/laser.gif" alt="" style="width: 100%; margin: 2rem 0;">
-
-        <h3 style="margin: 2rem 0 1rem 0;">Step 5: Wax Coating</h3>
-        <p>For thermal-driven actuation only, apply a soy wax coating to both sides of the wood veneer:</p>
+        
+        <img src="../../resources/img/Mechanism and Fabrication/laser-cut.gif" alt="Laser cutting demonstration" style="width: 100%; margin: 2rem 0;">
+        <h3 style="margin: 2rem 0 1rem 0;">Step 3: Inflation</h3>
+        <p>Once fabricated, the KiriInflate structure quickly shrinks and deforms upon inflation. The presence of the Kirigami cuts allows for significantly greater tensile elasticity and unique morphing behaviors.</p>
+        <h5 style="margin: 2rem 0 1rem 0;">Laser Parameters & Cross-Scale Fabrication Tips:</h5>
+        <p>The fabrication parameters of laser cutter (Power, Focal Length, Speed) vary depending on the material thickness and whether you aim for simultaneous cut-and-seal or heat-weld-only.</p>
         <ul>
-            <li>Wax Temperature: 60°C</li>
-            <li>Application: Apply a thin layer to both sides, allowing the wax to cover and penetrate the wood fibers.
-            </li>
+            <li><b>Material Thickness:</b> KiriInflate supports cross-scale fabrication, from sub-millimeter to sub-meter widths, accommodating various film thicknesses (e.g., 0.03 mm to 0.2 mm). Thinner materials require lower power settings to prevent excessive widening of cut seams.</li>
+            <li><b>Seal Width:</b> The width of the heat-sealed edge is a critical design parameter influencing deformation, mechanical strength, and durability. Wider seams are typically required for thicker materials and large-scale inflatables with wide air columns to ensure adequate fusion depth and pressure resistance.</li>
         </ul>
-        <p>Note: The wax coating is unaffected by typical ambient temperatures during use, ensuring it won’t melt or
-            interfere with
-            the actuator’s performance.</p>
-        <img src="../../resources/img/Mechanism and Fabrication/wax.gif" alt="" style="width: 100%; margin: 2rem 0;">
-        <p>After completing the above steps, you will have a temperature-driven actuator ready for use.</p>
-        <img src="../../resources/img/Mechanism and Fabrication/thermal-driven.gif" alt=""
-            style="width: 100%; margin: 2rem 0;">
 
-
-        <h2 style="margin: 6rem 0 2rem 0;">Fabricating a Hygro-Driven Actuator</h2>
-        <p>The fabrication process for the humidity-driven actuator is similar to that for the thermal-driven actuator,
-            with two
-            key differences:</p>
-        <ol style="margin: 1rem 0;">
-            <li>Use 0.5 mm thick pine veneer instead of elm veneer.</li>
-            <li>Skip the wax coating step, as it is not needed for humidity-driven actuation.
-                Following these steps, you will have a humidity-driven actuator.
-            </li>
-        </ol>
-        <p>Following these steps, you will have a humidity-driven actuator.</p>
-        <img src="../../resources/img/Mechanism and Fabrication/hygro-driven.gif" alt=""
-            style="width: 100%; margin: 2rem 0;">
-
-        <h2 style="margin: 6rem 0 2rem 0;">Coordinating Modes of Actuation</h2>
-        <p>TH-Wood actuators can be controlled in various modes depending on environmental changes. There are two basic
-            modes and
-            three coordinating modes to choose from:</p>
-        <h5 style="margin: 2rem 0 1rem 0;">Basic Modes:</h5>
-        <ol style="margin: 1rem 0;">
-            <li>Thermal-Driven Mode: The actuator deforms when the temperature reaches a specified level.</li>
-            <li>Hygro-Driven Mode: The actuator deforms when humidity reaches a certain threshold.
-                Coordinating Modes:
-                <ol style="margin: 1rem 0;">
-                    <li>Synergistic Mode (AND Logic): The actuator deforms only when both temperature and humidity
-                        meet their specific
-                        conditions. If only one factor meets the requirement, the actuator remains inactive.</li>
-                    <li>Substitutive Mode (OR Logic): The actuator deforms when either temperature or humidity reaches
-                        the specified
-                        condition.</li>
-                    <li>3 Serial Mode: The actuator responds sequentially to changes in temperature and humidity. When
-                        one factor reaches a
-                        certain threshold, a specific function is triggered. When the other factor reaches another
-                        threshold, a subsequent
-                        function is activated. These functions operate in sequence, without interfering with each other.
-                    </li>
-                </ol>
-            </li>
-        </ol>
-
-        <img src="../../resources/img/Mechanism and Fabrication/coordinating.png" alt=""
-            style="width: 100%; margin: 2rem 0;">
-        <p>Tip: Choose the appropriate control mode based on the requirements of your application for precise
-            deformation behavior.
-            Learning application examples helps you better understand coordinating modes.</p>
+        <h5 style="margin: 2rem 0 1rem 0;">Sample fabrication parameters:</h5>
+        <table>
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Laser Cutter</td>
+                    <td>Laserbox 2.0 (MLP-K503-40W)</td>
+                </tr>
+            </tbody>
+        </table>
+        
         <a href="../subpage/appExamples.html">
-            <h5 style="margin: 2rem 0 1rem 0;">Application Examples</h5>
+            <h5 style="margin: 4rem 0 1rem 0; color: rgba(229, 30, 243, 0.7);">Link to Application Examples Page</h5>
         </a>
+        
         <div style="margin-top: 10rem;"></div>
     </div>
 
-    <!-- 绘制图标 -->
     <script>
-        drawIcon(50 * (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) / 1728, "icon", false, false);
+        // If you don't have this script, you can comment it out.
+        // drawIcon(50 * (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) / 1728, "icon", false, false);
     </script>
 
-    <!-- 渲染outline -->
     <script>
         let outline = new DocumentOutline({
             backgroundColor: '#2c2c2c',
@@ -466,7 +268,6 @@
         d3.select(".outline-nav")
             .style("z-index", "99")
     </script>
-
 
 </body>
 
