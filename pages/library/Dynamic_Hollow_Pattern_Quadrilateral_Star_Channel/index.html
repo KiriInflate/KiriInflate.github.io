@@ -43,21 +43,12 @@
             font-size: 1rem;
             margin-bottom: 0.3rem;
         }
-
-        .shapediver-container {
-            width: 100%;
-            margin: 2rem 0;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            overflow: hidden;
-        }
         
-        .download-link {
+        .design-tool-link, .download-link {
             display: inline-block;
             margin-top: 1.5rem;
             padding: 12px 25px;
             color: white !important;
-            background-color: #28a745;
             font-family: 'Noto Sans', sans-serif;
             font-size: 1.1rem;
             font-weight: bold;
@@ -65,6 +56,16 @@
             text-decoration: none;
             border-radius: 8px;
             transition: background-color 0.3s ease;
+        }
+        .design-tool-link {
+            background-color: #007bff;
+        }
+        .design-tool-link:hover {
+            background-color: #0056b3;
+        }
+        .download-link {
+            background-color: #28a745;
+            margin-left: 1rem;
         }
         .download-link:hover {
             background-color: #218838;
@@ -77,7 +78,7 @@
         
         <h1 class="h1StylePTag content" style="margin: 0 0 2rem 0;">Quadrilateral Star Channel</h1>
 
-        <img src="1.png" alt="Quadrilateral Star Channel KiriInflate structure" style="width: 100%; margin: 2rem 0;">
+        <img src="Dynamic Hollow Pattern – Quadrilateral Star Channel_banner.png" alt="Quadrilateral Star Channel KiriInflate structure" style="width: 100%; margin: 2rem 0;">
 
         <h2 class="content" style="margin: 2rem 0;">How It Works</h2>
         <p>The Quadrilateral Star Channel is inspired by cross-shaped slits, forming a network of interconnected four-pointed star-shaped air channels. Upon inflation, each quadrilateral star contracts as its arms draw inward, resulting in a transformation of the surface geometry. Compared to the sharper angular changes in the triangular version, this structure exhibits a broader and more uniform contraction across the surface. This contraction reduces the size of the surface pores, enabling real-time modulation of porosity. Such a design holds promise for applications in tunable filtration, adaptive ventilation, and morphing architectural skins.</p>
@@ -107,23 +108,17 @@
         <img src="2.png" alt="Visualization of customization options for the Quadrilateral Star" style="width: 100%; margin: 2rem 0;">
 
         <h2 style="margin: 4rem 0 2rem 0;">Design Tool</h2>
-        <p>Use the interactive viewer below to adjust the parameters of the model in real-time. You can modify settings and see the geometric changes instantly.</p>
-        
-        <div class="shapediver-container">
-            <iframe 
-                width="100%" 
-                height="800px" 
-                src="https://www.shapediver.com/app/embed?m=dynamic-hollow-pattern-quadrilateral-star-channe&modelStateId=L7sAvlIBWsyfiDE4" 
-                frameborder="0" 
-                allow="fullscreen" 
-                allowfullscreen="true" 
-                mozallowfullscreen="true" 
-                webkitallowfullscreen="true">
-            </iframe>
-        </div>
+        <p>Click the link below to access the interactive Grasshopper model on ShapeDiver. If you encounter any issues with the online tool, you can also download the Grasshopper source file to use locally.</p>
         
         <div>
-             <a href="Quadrilateral Star Channel.gh" 
+            <a href="https://www.shapediver.com/app/m/dynamic-hollow-pattern-quadrilateral-star-channe?modelStateId=L7sAvlIBWsyfiDE4" 
+               class="design-tool-link" 
+               target="_blank" 
+               rel="noopener noreferrer">
+               Open Interactive Design Tool
+            </a>
+            
+            <a href="Quadrilateral_Star_Channel.gh" 
                class="download-link" 
                download>
                Download .gh File
